@@ -1,0 +1,59 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="aviornisPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>        
+        <class>com.titus.convierteaviornisasqlite.ant.Anillas</class>
+        <class>com.titus.convierteaviornisasqlite.ant.AnoContable</class>        
+        <class>com.titus.convierteaviornisasqlite.ant.Bic</class>
+        <class>com.titus.convierteaviornisasqlite.ant.Criadores</class>
+        <class>com.titus.convierteaviornisasqlite.ant.CuotasCriadores</class>        
+        <class>com.titus.convierteaviornisasqlite.ant.DatosFijos</class>
+        <class>com.titus.convierteaviornisasqlite.ant.DetalleFacturas</class>
+        <class>com.titus.convierteaviornisasqlite.ant.DetallePedidos</class>
+        <class>com.titus.convierteaviornisasqlite.ant.Grupos</class>
+        <class>com.titus.convierteaviornisasqlite.ant.Fabricantes</class>
+        <class>com.titus.convierteaviornisasqlite.ant.Facturas</class>
+        <class>com.titus.convierteaviornisasqlite.ant.NumerosAnillas</class>
+        <class>com.titus.convierteaviornisasqlite.ant.Paises</class>
+        <class>com.titus.convierteaviornisasqlite.ant.Pedidos</class>
+        <class>com.titus.convierteaviornisasqlite.ant.TiposAnillas</class>
+        <class>com.titus.convierteaviornisasqlite.ant.Usuarios</class>
+        <properties>            
+            <property name="eclipselink.canonicalmodel.subpackage" value="ant"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/aviornis?useTimezone=true&amp;serverTimezone=UTC&amp;useSSL=false"/>
+            <property name="jakarta.persistence.jdbc.user" value="arporral"/>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.password" value="demiurgo"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="aviornisSqlitePU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> 
+        <class>com.titus.convierteaviornisasqlite.nue.Anillas2</class>
+        <class>com.titus.convierteaviornisasqlite.nue.AnoContable2</class>
+        <class>com.titus.convierteaviornisasqlite.nue.Bic2</class>
+        <class>com.titus.convierteaviornisasqlite.nue.Criadores2</class>        
+        <class>com.titus.convierteaviornisasqlite.nue.CuotasCriadores2</class>
+        <class>com.titus.convierteaviornisasqlite.nue.DatosFijos2</class>
+        <class>com.titus.convierteaviornisasqlite.nue.DetalleFacturas2</class>
+        <class>com.titus.convierteaviornisasqlite.nue.DetallePedidos2</class>
+        <class>com.titus.convierteaviornisasqlite.nue.Fabricantes2</class>
+        <class>com.titus.convierteaviornisasqlite.nue.Facturas2</class>
+        <class>com.titus.convierteaviornisasqlite.nue.Grupos2</class>        
+        <class>com.titus.convierteaviornisasqlite.nue.NumerosAnillas2</class>
+        <class>com.titus.convierteaviornisasqlite.nue.Paises2</class>
+        <class>com.titus.convierteaviornisasqlite.nue.Pedidos2</class>
+        <class>com.titus.convierteaviornisasqlite.nue.TiposAnillas2</class>        
+        <class>com.titus.convierteaviornisasqlite.nue.Usuarios2</class>
+        <properties>            
+            <property name="eclipselink.canonicalmodel.subpackage" value="nue"/>
+            <property name="eclipselink.target-database" value="database"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:sqlite:F:\ANALISIS Y PROGRAMACION\Programas java\ConvierteAviornisASqlite\aviornis.db"/>
+            <property name="jakarta.persistence.jdbc.user" value=""/>
+            <property name="jakarta.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
+            <property name="jakarta.persistence.jdbc.password" value=""/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="none"/>
+        </properties>
+    </persistence-unit>
+</persistence>
